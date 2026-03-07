@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="Pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
+    <link rel="stylesheet" href="css/styles_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <a href="cadastro.html">Cadastrar</a>
+    
+<div class="conteiner">
+    <div class="icone_login">
+        <p>L</p>
+
+    </div>
+    
+    <h1 class="title">Bem vindo de volta </h1>
+    <p class="descricao">Entre com suas credenciais para continuar</p>
+<div class="email"> 
+    <p >E-MAIL</p>
+    <input type="email" placeholder="seu@gmail.com",id="email">
+</div>
+    
+<div class="senha">
+    <div class="senha_top">
+        <p>SENHA</p>
+        <a href="alterar_senha.html" class="esqueceu">Esqueceu?</a>
+    </div>
+    <input type="password" placeholder="senha",,id="password">
+    
+</div>
+    
+ <button class="btn_entrar" type="submit">Entrar →</button >
+
+    <p>ou</p>
+
+    <button class="btn_google"type="submit"><img class="img_google" src="assets/logo google.webp" alt="">Entrar com google </button>
+
+    <p class="criar_conta">Não tem uma conta? <a href="cadastro.html" class="link_criar_conta">Criar conta</a></p>
+
+</div>
+
 </body>
 </html>
