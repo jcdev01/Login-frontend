@@ -87,7 +87,7 @@ font-weight: bold;
     flex-direction: column;    /* p e input em coluna */
     gap: 5px;                  /* espaçamento entre p e input */
 }
-.email,.senha p{
+.email,.senha{
     color: gray;
     font-size: 0.8rem;
     font-weight: bold;
@@ -106,12 +106,24 @@ font-weight: bold;
     
 }
 .senha input{
-       border-radius: 0.7rem;
+    border-radius: 0.7rem;
     background-color: white;
     border-color: transparent;
     height: 2.5rem;
     width: 22rem;
     margin-left:0.8rem;
+}
+
+.nome input{
+    border-radius: 0.7rem;
+    background-color: white;
+    border-color: transparent;
+    height: 2.5rem;
+    width: 22rem;
+    margin-left:0.8rem;
+
+
+
 }
 .btn_entrar{
    
@@ -196,10 +208,230 @@ font-weight: bold;
 
 .link_criar_conta{
 color: black;
+}
 
+.conteiner_cadastro{
+     display: flex;              /* ativa flexbox no pai */
+    flex-direction: column;     /* itens em coluna */
+    justify-content: center;    /* centraliza verticalmente */
+    align-items: center;        /* centraliza horizontalmente */
+
+    background-color: rgb(244, 241, 241);
+    height: 620px;
+    width: 420px;
+    border-radius: 1rem;
+}
+
+.icone_login_cadastro{
+    
+    height: 80px;
+    width: 50px;
+    text-align: center;
+    display: flex;
+    background-color: black;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.title_cadastro{
+
+    font-size: 1.4rem;
+    margin-bottom: 1px;
+    font-weight: 130;
+}
+
+.descricao_cadastro{
+
+ font-size: 0.8rem;
+    font-weight: 100;
+    color: gray;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.icone_login_cadastro p{
+
+
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 1.4rem ;
+    font-weight: bold;
+}
+
+.email_cadastro{
+
+width: 90%;                /* ocupa quase toda a largura do card */
+    text-align: left;          /* texto alinhado à esquerda */
+    display: flex;
+    flex-direction: column;    /* p e input em coluna */
+    gap: 5px;     
+    
+
+}
+
+.senha_cadastro{
+    width: 90%;                /* ocupa quase toda a largura do card */
+    text-align: left;          /* texto alinhado à esquerda */
+    display: flex;
+    flex-direction: column;    /* p e input em coluna */
+    gap: 5px;     
+}
+
+.email_cadastro p{
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+}
+
+.email_cadastro input{
+border-radius: 0.7rem;
+    background-color: white;
+    border-color: transparent;
+    height: 2.5rem;
+    width: 22rem;
+    margin-left:0.8rem;
+    
+}
+
+
+
+.senha_cadastro p{
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
 
 
 }
+
+.senha_cadastro input{
+
+    border-radius: 0.7rem;
+    background-color: white;
+    border-color: transparent;
+    height: 2.5rem;
+    width: 22rem;
+    margin-left:0.8rem;
+}
+
+.nome{
+
+    width: 90%;                /* ocupa quase toda a largura do card */
+    text-align: left;          /* texto alinhado à esquerda */
+    display: flex;
+    flex-direction: column;    /* p e input em coluna */
+    gap: 5px;  
+}
+
+.nome p{
+
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.btn_entrar_cadastro{
+ border: none;
+    cursor: pointer;
+    background-color: black;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    height: 3.4rem;
+    width: 22rem;
+    color: white;
+    border-color: transparent;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn_entrar_cadastro:hover{
+      transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.btn_google_cadastro{
+display: flex;              /* ícone + texto lado a lado */
+    align-items: center;        /* centraliza verticalmente o conteúdo */
+    justify-content: center;    /* centraliza horizontalmente dentro do botão */
+    gap: 10px;                  /* espaço entre o ícone e o texto */
+   
+    
+    border: none;
+    border-radius: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: 400;
+
+    height: 3.4rem;
+    width: 22rem;               /* opcional: faz o botão ocupar toda a largura do container */
+    text-align: center;  
+
+}
+
+.btn_google_cadastro:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.img_google_cadastro{
+    width: 20px;
+    height: 20px;
+    object-fit:cover;        /* mantém proporção da logo */
+}
+
+
+.btn_enviar_link{
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    width: 22rem;
+    color: white;
+    border-color: transparent;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.btn_enviar_link:hover{
+  transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.voltar_login{
+    margin-top: 20px;
+    color: grey;
+    font-size: small;
+}
+
+.voltar_login a{
+color: black;
+
+}
+
+
+
+
+
+
 
 
 
