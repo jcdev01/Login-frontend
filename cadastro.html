@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration page</title>
     <link rel="stylesheet" href="css/styles_login.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
 <body>
    
@@ -20,25 +22,25 @@
 
 <div class="nome">
     <p>NOME COMPLETO </p>
-    <input type="text" placeholder="seu nome"  id="nome">
+    <input type="text" placeholder="seu nome"  id="nome_cadastro">
 
 </div>
 
 
 <div class="email_cadastro"> 
     <p >E-MAIL</p>
-    <input type="email" placeholder="seu@gmail.com",id="email">
+    <input type="email" placeholder="seu@gmail.com" id="email_cadastro">
 </div>
     
 <div class="senha_cadastro">
     <div class="senha_top">
         <p>SENHA</p>
     </div>
-    <input type="password" placeholder="senha",,id="password">
+    <input type="password" placeholder="senha" id="password_cadastro">
     
 </div>
     
- <button class="btn_entrar_cadastro" type="submit">Criar conta →</button >
+ <button onclick="cadastrar_usuario()" class="btn_entrar_cadastro" type="submit">Criar conta →</button >
 
     <p>ou</p>
 
@@ -49,6 +51,6 @@
 </div>
     
     
-    
+
 </body>
 </html>
