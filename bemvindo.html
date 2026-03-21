@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bem-vindo!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0f;
+      background-image: url("/assets/fundo_web.jpg");
+    }
+
+    .card {
+      background: #f5f4f0;
+      border-radius: 20px;
+      padding: 48px 44px;
+      width: 90%;
+      max-width: 440px;
+      text-align: center;
+      animation: rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .icon-wrap {
+      width: 64px; height: 64px;
+      background: #1a1a1a;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 28px;
+      animation: pop 0.5s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes pop {
+      from { opacity: 0; transform: scale(0.6); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #888;
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .name {
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 0.82rem;
+      color: #aaa;
+    }
+    .footer a {
+      color: #1a1a1a;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="icon-wrap">🎉</div>
+
+    <h1>Parabéns, <span class="name" id="nome">usuário</span>!</h1>
+    <p>Seu cadastro foi concluído com sucesso.<br>Você já está dentro da plataforma.</p>
+
+    <button class="btn" onclick="sair()">Sair →</button>
+
+    <div class="footer">
+      <a onclick="sair()">Encerrar sessão</a>
+    </div>
+
+  </div>
+
+  <script>
+    // Pega o nome do token JWT salvo no localStorage
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = 'login.html';
+    } else {
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        const nome = payload.nome || payload.name || payload.sub || 'usuário';
+        document.getElementById('nome').textContent = nome;
+      } catch (e) {}
+    }
+
+    function sair() {
+      localStorage.removeItem('token');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

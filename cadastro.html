@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/styles_login.css">
     <script src="js/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="js/script.js" defer></script>
+     <script src="https://accounts.google.com/gsi/client" async defer></script>
+
 </head>
 <body>
    
@@ -44,7 +47,19 @@
 
     <p>ou</p>
 
-    <button class="btn_google_cadastro"type="submit"><img class="img_google_cadastro" src="assets/logo google.webp" alt="">Entrar com google </button>
+    <div id="g_id_onload"
+     data-client_id="825930097023-rcqinabvp49hpmtik10usipufdpjvvcs.apps.googleusercontent.com"
+     data-callback="handleGoogleLogin"  
+     data-type="button">
+</div>    
+
+<div class="g_id_signin"
+     data-type="button"
+     data-size="large"
+     data-text="signin_with"
+     data-theme="outline"
+     data-shape="rectangular">
+</div>  
 
     <p class="criar_conta">Já tem uma conta? <a href="login.html" class="link_criar_conta">faça o login</a></p>
 
