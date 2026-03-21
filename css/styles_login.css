@@ -1,463 +1,316 @@
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-image: url("/assets/fundo_web.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-
-.btn_google{
-background-color: white;
-height:2.5rem ;
-width: 22rem;
-border-color: transparent;
-border-radius: 0.5rem;
-font-weight: bold;
-
-
-
-}
-
-
-.btn_google img{
-    width: 20px;
-    height: 20px;
-
-}
+/* ===== CONTAINERS ===== */
 .conteiner {
-    display: flex;              /* ativa flexbox no pai */
-    flex-direction: column;     /* itens em coluna */
-    justify-content: center;    /* centraliza verticalmente */
-    align-items: center;        /* centraliza horizontalmente */
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(244, 241, 241);
-    height: 620px;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
+    min-height: 620px;
     border-radius: 1rem;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
 
-   
+.conteiner_cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: auto; /* ← troque 620px por auto */
+    height: auto;
+    background-color: rgb(244, 241, 241);
+    width: 100%;
+    max-width: 420px;
+    border-radius: 1rem;
+    padding: 30px 20px;
+    box-sizing: border-box;
 }
 
 
-.title{
-    font-size: 1.4rem;
-    margin-bottom: 1px;
-    font-weight: 130;
-}
-
-.descricao{
-    font-size: 0.8rem;
-    font-weight: 100;
-    color: gray;
-
-}
-.icone_login{
-
+/* ===== ÍCONES ===== */
+.icone_login {
     height: 50px;
     width: 50px;
-    text-align: center;
     display: flex;
     background-color: black;
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
-.icone_login p{
+.icone_login p {
     margin: 0;
     padding: 0;
     color: white;
-    text-align: center;
-    font-family:sans-serif;
-    font-size: 1.4rem ;
+    font-family: sans-serif;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
-.email,.senha{
-    width: 90%;                /* ocupa quase toda a largura do card */
-    text-align: left;          /* texto alinhado à esquerda */
+.icone_login_cadastro {
+    height: 60px;
+    width: 50px;
     display: flex;
-    flex-direction: column;    /* p e input em coluna */
-    gap: 5px;                  /* espaçamento entre p e input */
+    background-color: black;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-shrink: 0;
 }
-.email,.senha{
+
+.icone_login_cadastro p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* ===== TÍTULOS ===== */
+.title,
+.title_cadastro {
+    font-size: 1.4rem;
+    margin-bottom: 1px;
+    font-weight: 130;
+    text-align: center;
+}
+
+.descricao,
+.descricao_cadastro {
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: gray;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* ===== CAMPOS ===== */
+.email, .senha,
+.email_cadastro, .senha_cadastro,
+.nome {
+    width: 90%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     color: gray;
     font-size: 0.8rem;
     font-weight: bold;
-    margin-bottom: 0;
     margin-top: 10px;
-    
-    
-}
-.email input{
-    border-radius: 0.7rem;
-    background-color: white;
-    border-color: transparent;
-    height: 2.5rem;
-    width: 22rem;
-    margin-left:0.8rem;
-    
-}
-.senha input{
-    border-radius: 0.7rem;
-    background-color: white;
-    border-color: transparent;
-    height: 2.5rem;
-    width: 22rem;
-    margin-left:0.8rem;
+    box-sizing: border-box;
 }
 
-.nome input{
-    border-radius: 0.7rem;
-    background-color: white;
-    border-color: transparent;
-    height: 2.5rem;
-    width: 22rem;
-    margin-left:0.8rem;
-
-
-
-}
-.btn_entrar{
-   
-    border: none;
-    cursor: pointer;
-    background-color: black;
-    margin-top: 2rem;
-    border-radius: 0.5rem;
-    height: 2.5rem;
-    width: 22rem;
-    color: white;
-    border-color: transparent;
+.email_cadastro p,
+.nome p {
+    color: gray;
+    font-size: 0.8rem;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.btn_entrar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
+.senha_cadastro p {
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
 
-.btn_google {
-    display: flex;              /* ícone + texto lado a lado */
-    align-items: center;        /* centraliza verticalmente o conteúdo */
-    justify-content: center;    /* centraliza horizontalmente dentro do botão */
-    gap: 10px;                  /* espaço entre o ícone e o texto */
-   
-    
-    border: none;
-    border-radius: 0.5rem;
+.nome p {
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+/* ===== INPUTS — sem width fixo ===== */
+.email input,
+.senha input,
+.nome input,
+.email_cadastro input,
+.senha_cadastro input {
+    border-radius: 0.7rem;
     background-color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    font-weight: 400;
-
+    border: none;
     height: 2.5rem;
-    width: 22rem;               /* opcional: faz o botão ocupar toda a largura do container */
-    text-align: center;        /* garante que o texto esteja centralizado */
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
 }
 
-.btn_google:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-}
-
-.img_google {
-    width: 100px;
-    height: 100px;
-    object-fit:cover;        /* mantém proporção da logo */
-}
-
-
-/* Container da linha superior: SENHA + Esqueceu? */
+/* ===== SENHA TOP ===== */
 .senha_top {
-    display: flex;                  /* deixa os itens na mesma linha */
-    justify-content: space-between; /* SENHA à esquerda, Esqueceu? à direita */
-    align-items: center;            /* centraliza verticalmente */
-    margin-bottom: 5px;             /* distância do input abaixo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 90%;
 }
-
-
 
 .esqueceu {
     color: grey;
     cursor: pointer;
     font-size: 0.7rem;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    margin-top: 20px;
-}
-
-.criar_conta{
-    
-    margin-top: 50px;
-    color: grey;
-    font-size: small;
-
-}
-
-.link_criar_conta{
-color: black;
-}
-
-.conteiner_cadastro{
-     display: flex;              /* ativa flexbox no pai */
-    flex-direction: column;     /* itens em coluna */
-    justify-content: center;    /* centraliza verticalmente */
-    align-items: center;        /* centraliza horizontalmente */
-
-    background-color: rgb(244, 241, 241);
-    height: 620px;
-    width: 420px;
-    border-radius: 1rem;
-}
-
-.icone_login_cadastro{
-    
-    height: 80px;
-    width: 50px;
-    text-align: center;
-    display: flex;
-    background-color: black;
-    border-radius: 1rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.title_cadastro{
-
-    font-size: 1.4rem;
-    margin-bottom: 1px;
-    font-weight: 130;
-}
-
-.descricao_cadastro{
-
- font-size: 0.8rem;
-    font-weight: 100;
-    color: gray;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.icone_login_cadastro p{
-
-
     margin: 0;
-    padding: 0;
-    color: white;
-    text-align: center;
-    font-family:sans-serif;
-    font-size: 1.4rem ;
-    font-weight: bold;
 }
 
-.email_cadastro{
-
-width: 90%;                /* ocupa quase toda a largura do card */
-    text-align: left;          /* texto alinhado à esquerda */
-    display: flex;
-    flex-direction: column;    /* p e input em coluna */
-    gap: 5px;     
-    
-
-}
-
-.senha_cadastro{
-    width: 90%;                /* ocupa quase toda a largura do card */
-    text-align: left;          /* texto alinhado à esquerda */
-    display: flex;
-    flex-direction: column;    /* p e input em coluna */
-    gap: 5px;     
-}
-
-.email_cadastro p{
-    color: gray;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 15px;
-
-}
-
-.email_cadastro input{
-border-radius: 0.7rem;
-    background-color: white;
-    border-color: transparent;
-    height: 2.5rem;
-    width: 22rem;
-    margin-left:0.8rem;
-    
-}
-
-
-
-.senha_cadastro p{
-    color: gray;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 15px;
-
-
-}
-
-.senha_cadastro input{
-
-    border-radius: 0.7rem;
-    background-color: white;
-    border-color: transparent;
-    height: 2.5rem;
-    width: 22rem;
-    margin-left:0.8rem;
-}
-
-.nome{
-
-    width: 90%;                /* ocupa quase toda a largura do card */
-    text-align: left;          /* texto alinhado à esquerda */
-    display: flex;
-    flex-direction: column;    /* p e input em coluna */
-    gap: 5px;  
-}
-
-.nome p{
-
-    color: gray;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.btn_entrar_cadastro{
- border: none;
-    cursor: pointer;
-    background-color: black;
-    margin-top: 1.2rem;
-    border-radius: 0.5rem;
-    height: 3.4rem;
-    width: 22rem;
-    color: white;
-    border-color: transparent;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn_entrar_cadastro:hover{
-      transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-}
-
-.btn_google_cadastro{
-display: flex;              /* ícone + texto lado a lado */
-    align-items: center;        /* centraliza verticalmente o conteúdo */
-    justify-content: center;    /* centraliza horizontalmente dentro do botão */
-    gap: 10px;                  /* espaço entre o ícone e o texto */
-   
-    
+/* ===== BOTÕES — sem width fixo ===== */
+.btn_entrar,
+.btn_google,
+.btn_entrar_cadastro,
+.btn_google_cadastro,
+.btn_enviar_link {
+    width: 90%;
+    height: 80%;
     border: none;
     border-radius: 0.5rem;
-    background-color: white;
     cursor: pointer;
-    font-size: 1rem;
+    font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: transform 0.2s, box-shadow 0.2s;
-    font-weight: 400;
-
-    height: 3.4rem;
-    width: 22rem;               /* opcional: faz o botão ocupar toda a largura do container */
-    text-align: center;  
-
+    box-sizing: border-box;
 }
 
-.btn_google_cadastro:hover{
+.btn_entrar,
+.btn_enviar_link {
+    background-color: black;
+    color: white;
+    height: 2.5rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+.btn_entrar_cadastro {
+    background-color: black;
+    color: white;
+    height: 3.4rem;
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.btn_google,
+.btn_google_cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.btn_google { height: 2.5rem; }
+.btn_google_cadastro { height: 3.4rem; }
+
+.btn_entrar:hover,
+.btn_entrar_cadastro:hover,
+.btn_google:hover,
+.btn_google_cadastro:hover,
+.btn_enviar_link:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
-.img_google_cadastro{
+/* ===== IMAGENS GOOGLE ===== */
+.img_google,
+.img_google_cadastro {
     width: 20px;
     height: 20px;
-    object-fit:cover;        /* mantém proporção da logo */
+    object-fit: cover;
 }
 
-
-.btn_enviar_link{
-    border: none;
-    cursor: pointer;
-    background-color: black;
-    margin-top: 2rem;
-    border-radius: 0.5rem;
-    height: 2.5rem;
-    width: 22rem;
-    color: white;
-    border-color: transparent;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-
+/* ===== LINKS ===== */
+.criar_conta {
+    margin-top: 50px;
+    color: grey;
+    font-size: small;
+    text-align: center;
 }
 
-.btn_enviar_link:hover{
-  transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-}
+.link_criar_conta { color: black; }
 
-.voltar_login{
+.voltar_login {
     margin-top: 20px;
     color: grey;
     font-size: small;
+    text-align: center;
 }
 
-.voltar_login a{
-color: black;
+.voltar_login a { color: black; }
 
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+        align-items: flex-start;
+        padding-top: 24px;
+        height: auto;
+    }
+
+    .conteiner,
+    .conteiner_cadastro {
+        min-height: auto;
+        border-radius: 0.8rem;
+        padding: 24px 16px;
+        width: 100%;
+    }
+
+    .title,
+    .title_cadastro {
+        font-size: 1.1rem;
+    }
+
+    .email input,
+    .senha input,
+    .nome input,
+    .email_cadastro input,
+    .senha_cadastro input {
+        font-size: 16px; /* evita zoom automático no iOS */
+    }
+
+    .btn_entrar,
+    .btn_google,
+    .btn_entrar_cadastro,
+    .btn_google_cadastro,
+    .btn_enviar_link {
+        width: 100%;
+    }
+
+    .email, .senha,
+    .email_cadastro, .senha_cadastro,
+    .nome {
+        width: 100%;
+    }
+
+    .senha_top {
+        width: 100%;
+    }
+
+    .criar_conta {
+        margin-top: 24px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
