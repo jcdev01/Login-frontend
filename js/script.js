@@ -1,4 +1,3 @@
-
 async function cadastrar_usuario() {
     
     // pegando o valor do input 
@@ -71,7 +70,7 @@ async function cadastrar_usuario() {
 
         })
 
-        if(email)
+
 
 
     }
