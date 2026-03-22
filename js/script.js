@@ -1,3 +1,4 @@
+
 async function cadastrar_usuario() {
     
     // pegando o valor do input 
@@ -26,7 +27,7 @@ async function cadastrar_usuario() {
 
     return
 
-    }
+}
 
 
     //enviando os dados para api
@@ -61,15 +62,16 @@ async function cadastrar_usuario() {
     });
 
     }
-
     else{
         Swal.fire({
             icon:"error",
             title:"erro",
-            text:"não foi possivel cadastrar o usuário tente novamente mais tarde"
+            text:"não foi possivel cadastrar o usuário tente novamente mais tarde ou verifique se ja não está cadastrado"
 
 
         })
+
+        if(email)
 
 
     }
