@@ -156,8 +156,9 @@ async function handleGoogleLogin(googleResponse) {
             text: "Não foi possível autenticar com o Google"
         });
     }
-}
 
+}
+ window.handleGoogleLogin = handleGoogleLogin;
 
 
  
