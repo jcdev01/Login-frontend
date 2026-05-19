@@ -30,7 +30,7 @@ async function cadastrar_usuario() {
 
 
     //enviando os dados para api
-    const url="https://login-backend-api-production-43f3.up.railway.app/auth/register"
+    const url="https://login-backend-api-1.onrender.com/auth/register"
     const response= await fetch(url,{
 
         method:"POST",
@@ -91,7 +91,7 @@ async function login_usuario() {
         return
     }
 
-    const url="https://login-backend-api-production-43f3.up.railway.app/auth/login"
+    const url="https://login-backend-api-1.onrender.com/auth/login"
     const response= await fetch(url,{
 
         method:"POST",
@@ -134,7 +134,7 @@ async function login_usuario() {
 
 async function handleGoogleLogin(googleResponse) {
     const googleToken = googleResponse.credential;
-    const response = await fetch("https://login-backend-api-production-43f3.up.railway.app/auth/google", {
+    const response = await fetch("https://login-backend-api-1.onrender.com/auth/google", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ token: googleToken })
